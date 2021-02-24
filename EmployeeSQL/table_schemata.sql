@@ -10,7 +10,7 @@ SELECT * FROM departments;
 -- create table for department employees
 CREATE TABLE dept_emp (
 	emp_no INT,
-	dept_no VARCHAR
+	dept_no VARCHAR NOT NULL
 );
 
 -- show dept_emp table
@@ -18,7 +18,7 @@ SELECT * FROM dept_emp;
 
 -- create table for department manager
 CREATE TABLE dept_manager (
-	dept_no VARCHAR,
+	dept_no VARCHAR NOT NULL,
 	emp_no INT
 );
 
@@ -28,11 +28,11 @@ SELECT * FROM dept_manager;
 -- create table for employees
 CREATE TABLE employees (
 	emp_no INT PRIMARY KEY,
-	emp_title_id VARCHAR,
+	emp_title_id VARCHAR NOT NULL,
 	birth_date date,
-	first_name VARCHAR,
-	last_name VARCHAR,
-	sex VARCHAR,
+	first_name VARCHAR NOT NULL,
+	last_name VARCHAR NOT NULL,
+	sex VARCHAR NOT NULL,
 	hire_date date
 );
 
@@ -50,8 +50,8 @@ SELECT * FROM salaries;
 
 -- create table for titles
 CREATE TABLE titles (
-	title_id VARCHAR,
-	title VARCHAR
+	title_id VARCHAR NOT NULL,
+	title VARCHAR NOT NULL
 );
 
 -- show titles table
